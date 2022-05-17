@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine3.14
+FROM mcr.microsoft.com/dotnet/aspnet:6.0.5-alpine3.15-amd64
 # Calendar information is provided by International
 # Components for Unicode (ICU) for .NET Core on Linux
 # To using JapaneseCalendar, ICU should be installed.
