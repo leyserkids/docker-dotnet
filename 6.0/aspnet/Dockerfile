@@ -3,6 +3,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0.5-alpine3.15-amd64
 # Components for Unicode (ICU) for .NET Core on Linux
 # To using JapaneseCalendar, ICU should be installed.
 RUN apk add --no-cache icu-libs --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
+RUN apk add --no-cache icu-data-full --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
 # https://github.com/dotnet/dotnet-docker/pull/1312
 RUN apk add --no-cache tzdata --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
 # Disable the invariant mode
