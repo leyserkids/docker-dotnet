@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0.25-noble-amd64
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends tzdata \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false \
+    ASPNETCORE_HTTP_PORTS=80 \
+    LC_ALL=en_US.UTF-8 \
+    LANG=en_US.UTF-8 \
+    TZ=Etc/UTC
